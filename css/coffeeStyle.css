@@ -1,0 +1,56 @@
+.grey {
+	background: #dddddd;
+}
+
+.red {
+	background: #ff0000;
+}
+
+.blue {
+	background: #0000ff;
+}
+
+.white {
+	background: #ffffff;
+}
+
+.vertical-align {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
+}
+
+.info {
+	font-size: 18pt;
+    border: 1px solid #ccc;
+    height: 100px;
+}
+
+.info > .info-addon, .info-value, .info-button-group {
+
+}
+
+.info > .info-addon {
+	text-align: center;
+	background-color: #eee;
+}
+
+.info > .info-value {
+	text-align: left;
+	background-color: #fff;
+	}
+
+.info > .info-button-group {
+}
+
+.empty {
+
+}
+
+/* overrides bootstrap container padding 
+.container {
+	padding-right: 0;
+	padding-left: 0;
+}
+*/
