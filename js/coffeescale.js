@@ -73,6 +73,6 @@
 	//initialize selectedCoffeeType by selecting the first element in the array.
 	var selectedCoffeeType = coffeeTypes[0];
 
-	var coffeeWeight = 10;
+	var coffeeWeight = 30;
 
 })();

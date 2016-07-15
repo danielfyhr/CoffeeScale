@@ -1,9 +1,12 @@
 .grey {
-	background: #dddddd;
+	background: #ddd;
 }
 
 .red {
 	background: #ff0000;
+	padding: 10px;
+	width: auto;
+	margin: 0 auto;
 }
 
 .blue {
@@ -22,23 +25,22 @@
 }
 
 .info {
+	margin-top: 7px;
+	margin-bottom: 7px;
 	font-size: 18pt;
-    border: 1px solid #ccc;
-    height: 100px;
+	background-color: #fff;
+	box-shadow: 0px 1px 5px #ccc;
 }
 
 .info > .info-addon, .info-value, .info-button-group {
-
 }
 
-.info > .info-addon {
-	text-align: center;
-	background-color: #eee;
+.info > .info-addon, .info-value {
+	border-right: 1px solid #ddd;
 }
 
 .info > .info-value {
-	text-align: left;
-	background-color: #fff;
+	text-align: right;
 	}
 
 .info > .info-button-group {
@@ -46,6 +48,16 @@
 
 .empty {
 
+}
+
+/* overrides bootstrap padding */
+.panel-heading, .panel-body {
+	padding:10px 0px;
+}
+
+.col-centered{
+    float: none;
+    margin: 0 10px;
 }
 
 /* overrides bootstrap container padding 
