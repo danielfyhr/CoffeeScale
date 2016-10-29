@@ -1,3 +1,0 @@
-# CoffeeScale
-
-readme
