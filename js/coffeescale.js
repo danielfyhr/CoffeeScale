@@ -9,7 +9,7 @@
 		}
 	}]);
 
-	app.controller('CoffeeController', function() {
+	app.controller('CoffeeController', ['$timeout', function($timeout) {
 		
 		this.coffeeTypes = coffeeTypes;
 		this.coffeeWeight = coffeeWeight;
@@ -53,20 +53,36 @@
 
 		};
 
-	});
+		this.startTimer = function () {
+			console.log("startTimer called");
+		}
+		this.pauseTimer = function () {
+			console.log("pauseTimer  called");
+		}
+		this.resetTimer = function () {
+			console.log("resetTimer called");
+		}
+
+		this.getTime = function() {
+			return selectedCoffeeType.time;
+		};
+
+	}]);
 
 	var coffeeTypes = [
 			{
 				name: 'Coldbrew',
 				description: '<p>Makes a concentrated coffee which you can serve warm by adding boiling water.</p><p>Put the grind in a bowl and soak everything with the given amount of cold water. Cover with cling film and let it seep in room temperature for ~12 hours. Filter out the grind and store it in the fridge.</p><p>To serve preheat a cup, then measure <strong>1/6</strong> of the coldbrew and top with <strong>5/6</strong> boiling water.</p>',
 				waterMultiplier: 6,
-				servingsMultiplier: 10
+				servingsMultiplier: 10,
+				time: 240
 			},
 			{
 				name: 'Frenchpress',
 				description: '<p>A quick way to make coffee.</p><p>Put the grind in a french press and soak everything with the given amount of almost boiling water (let it cool a bit after boiling). Let it seep for <strong>4</strong> minutes.</p>',
 				waterMultiplier: 17,
-				servingsMultiplier: 7
+				servingsMultiplier: 7,
+				time: 240
 			}
 	];
 
