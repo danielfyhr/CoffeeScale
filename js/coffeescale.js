@@ -82,6 +82,7 @@
 			if ($scope.countDown == 0) {
 				window.alert('Kaffet är färdigt bror!')
 				$timeout.cancel(timeoutFunction);
+				$scope.destroyTimer();
 			}
 		}
 
