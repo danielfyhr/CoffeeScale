@@ -23,11 +23,13 @@
 		$scope.countDown = selectedCoffeeType.time; //initiate countDown
 		
 		this.selectCoffeeType = function(setCoffeeType) {
-			this.selectedCoffeeType = setCoffeeType;
+			selectedCoffeeType = setCoffeeType;
+			$scope.countDown = selectedCoffeeType.time; //initiate countDown
+			$scope.resetTimer(); //reset timer
 		};
 
 		this.coffeeTypeIsSelected = function(checkType) {
-			return this.selectedCoffeeType === checkType;
+			return selectedCoffeeType === checkType;
 		};
 
 		this.getWaterWeight = function() {
@@ -40,6 +42,7 @@
 
 		this.addToCoffeeWeight = function(value) {
 			if ( this.coffeeWeight + value >= 0 ) {
+				console.log('about to add some weight to coffee:' + value);
 				this.coffeeWeight += value;
 			}
 		};
@@ -117,7 +120,7 @@
 				description: '<p>Makes a concentrated coffee which you can serve warm by adding boiling water.</p><p>Put the grind in a bowl and soak everything with the given amount of cold water. Cover with cling film and let it seep in room temperature for ~12 hours. Filter out the grind and store it in the fridge.</p><p>To serve preheat a cup, then measure <strong>1/6</strong> of the coldbrew and top with <strong>5/6</strong> boiling water.</p>',
 				waterMultiplier: 6,
 				servingsMultiplier: 10,
-				time: 120
+				time: 1
 			},
 			{
 				name: 'Frenchpress',
